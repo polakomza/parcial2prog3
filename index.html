@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <!-- fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--icons-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <title>Parcial 2</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="container__header__main">
+        <div class="container__header">
+          <div class="headerSearch">
+            <input
+              class="inputSearch"
+              type="text"
+              placeholder="Ingrese un elemento"
+              id="inputSearch"
+            />
+            <button class="buttonSearch" id="buttonSearch">
+              Buscar
+              <span class="material-symbols-outlined"> search </span>
+            </button>
+          </div>
+          <div>
+            <button class="header__buttonAdd" id="buttonAdd">
+              Agregar Elemento
+              <span class="material-symbols-outlined"> library_add </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <div class="container__view">
+        <aside class="listAside">
+          <h2>
+            Categorias
+            <span class="material-symbols-outlined"> filter_list </span>
+          </h2>
+          <ul id="listFilter"></ul>
+        </aside>
+        <div class="store" id="storeContainer"></div>
+      </div>
+      <!-- POPUP -->
+      <div class="containerPopUp__main" id="modalPopUp">
+        <div class="containerPopUp">
+          <div class="containerTitle__popUp">
+            <h1>Agregar o modificar un producto</h1>
+          </div>
+          <div class="containerInputs__popUp">
+            <input type="text" placeholder="ingrese un nombre" id="name" />
+            <input type="text" placeholder="ingrese una imagen" id="image" />
+            <input type="number" placeholder="precio" value="0" id="price" />
+            <select name="" id="category">
+              <option value="">Seleccione una categoria</option>
+              <option value="Hamburguesas">Hamburguesas</option>
+              <option value="Papas">Papas</option>
+              <option value="Gaseosas">Gaseosas</option>
+            </select>
+          </div>
+          <div class="containerButtons__popUp">
+            <button class="buttonPopUp cancel" id="cancelButton">Cancelar</button>
+            <button class="buttonPopUp accept" id="acceptButton">Aceptar</button>
+            <button class="buttonPopUp delete" id="deleteButton">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script type="module" src="/main.js"></script>
+</html>
